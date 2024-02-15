@@ -19,4 +19,4 @@ async function getAllUsers() {
 }
 
 
-module.exports = {getAllTodos}
+module.exports = {getAllUsers}
