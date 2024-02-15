@@ -1,9 +1,9 @@
 const database = include('/databaseConnection');
 
 
-async function getAllTodos() {
+async function getAllUsers() {
 	let sqlQuery = `
-		SELECT * FROM todo
+		SELECT web_user_id, first_name, last_name, email FROM Web_User
 	`;
 	
 	try {
@@ -12,7 +12,7 @@ async function getAllTodos() {
 		return results[0];
 	}
 	catch (err) {
-		console.log("Error selecting from todo table");
+		console.log("Error selecting from user table");
 		console.log(err);
 		return null;
 	}
